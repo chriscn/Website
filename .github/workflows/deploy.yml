@@ -2,16 +2,16 @@ name: Deploy to DigitalOcean Server
 on: [push]
 jobs:
   build:
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@master
-  - name: SCP to DigitalOcean droplet
-  - uses: appleboy/scp-action@v0.1.1
-    with:
-      host: ${{ secrets.HOST }}
-      username: ${{ secrets.USERNAME }}
-      port: 22
-      key: ${{ secrets.KEY }}
-      passphrase: ${{ secrets.PASSPHRASE }}
-      source: "*"
-      target: "/home/christopher/docker/swag/www/"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: SCP to DigitalOcean droplet
+    - uses: appleboy/scp-action@v0.1.1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: 22
+        key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
+        source: "*"
+        target: "/home/christopher/docker/swag/www/"

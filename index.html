@@ -35,13 +35,13 @@
 
     <body>
         <div class="message">
-            <h1 id="welcome">Hello, World.</h1>
+            <h1 id="welcome"></h1>
             <p>Welcome to my Website, it is the first I've hosted one; this is current running on <a href="https://digitalocean.com">DigitalOcean</a>.</p>
             <p>My name is Christopher Nethercott. Most of my programming work can be found on <a href="https://github.com/chriscn">GitHub</a>.</p>
         </div>
     </body>
     <script>
-        document.getElementById('welcome').innerHTML = "Hello and Good " + timeOfDay();
+        document.getElementById('welcome').innerHTML = "Good " + timeOfDay();
 
         function timeOfDay() {
             var hours = new Date().getHours;

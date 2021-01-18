@@ -44,7 +44,8 @@
         document.getElementById('welcome').innerHTML = "Good " + timeOfDay();
 
         function timeOfDay() {
-            var hours = new Date().getHours;
+            var hours = new Date().getHours();
+            console.log(hours)
             if (hours > 0 && hours <= 12) {
                 return "Morning."
             } else if (hours > 12 && hours <= 17) {

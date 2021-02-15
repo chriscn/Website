@@ -43,6 +43,7 @@
     <script>
         document.getElementById('welcome').innerHTML = "Good " + timeOfDay();
 
+	// Return time of day as a string.
         function timeOfDay() {
             var hours = new Date().getHours();
             if (hours > 0 && hours <= 12) {
